@@ -1,29 +1,4 @@
-Configuration ChocolateyServer
-{
-    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
-
-    WindowsFeature IIS
-    {
-        Ensure = "Present"
-        Name = "Web-Server"
-    }
-
-    WindowsFeature ASP
-    {
-        Ensure = "Present"
-        Name = "Web-Asp-Net45"
-    }
-
-    WindowsFeature WebServerManagementConsole
-    {
-        Name = "Web-Mgmt-Console"
-        Ensure = "Present"
-    }
-}
-
-ChocolateyServer
-
-Import-Module WebAdministration
+# builds upon part 1. Now the windows features should be available
 
 Set-ExecutionPolicy Bypass -Scope Process -Force
 
