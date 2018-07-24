@@ -4,7 +4,7 @@ Param(
     [string] [Parameter(Mandatory=$true)] $ResourceGroupLocation,
     [string] $ResourceGroupName = 'ChocolateyServer',
     [switch] $UploadArtifacts,
-    [string] $StorageAccountName,
+    [string] $StorageAccountName = "ChocoARM",
     [string] $StorageContainerName = $ResourceGroupName.ToLowerInvariant() + '-stageartifacts',
     [string] $TemplateFile = 'ChocolateyServer.json',
     [string] $TemplateParametersFile = 'ChocolateyServer.parameters.json',
